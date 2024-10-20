@@ -37,7 +37,7 @@
 // };
 // export default NavBar;
 
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 // import AnimatedLink from "./AnimatedLink";
 import { AnimatePresence, motion } from "framer-motion";
@@ -192,7 +192,7 @@ const MobileNavLink = ({ title, href }: MobileNavLink) => {
       variants={mobileLinkVars}
       className="text-5xl uppercase text-black"
     >
-      <Link href={href}>{title}</Link>
+      <Link to={href}>{title}</Link>
     </motion.div>
   );
 };

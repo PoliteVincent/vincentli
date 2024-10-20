@@ -1,7 +1,7 @@
 import VelocityText from "./text/VelocityText";
 import { useRef } from "react";
-import { motion } from "framer-motion";
-import styles from "./text/VelocityText.module.css";
+// import { motion } from "framer-motion";
+// import styles from "./text/VelocityText.module.css";
 const Me = () => {
   const targetRef = useRef(null);
 

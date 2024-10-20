@@ -1,5 +1,5 @@
 import styles from "./VelocityText.module.css";
-import React, { useRef } from "react";
+import React from "react";
 import {
   motion,
   useTransform,

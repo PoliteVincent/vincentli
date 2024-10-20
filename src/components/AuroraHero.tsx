@@ -6,13 +6,12 @@ import { Stars } from "@react-three/drei";
 
 import BubbleText from "./text/BubbleText";
 
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import {
   motion,
   useMotionTemplate,
   useMotionValue,
   animate,
-  useSpring,
 } from "framer-motion";
 
 // const COLORS = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
