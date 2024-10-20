@@ -1,0 +1,38 @@
+.bubble {
+  text-align: center;
+  font-size: 3rem;
+  /* font-weight: 200; */
+  /* color: #a5b4fc; */
+  position: relative;
+}
+
+.hoverT {
+  --add: 0;
+  position: relative;
+  z-index: calc(1 + var(--add) * 2);
+  display: inline-block;
+  font-weight: calc(200 + 700 * var(--add));
+  font-stretch: calc(100% + 25% * var(--add));
+  color: hsl(240deg, 100%, calc(85% + 15% * 0.45));
+  transition: transform 0.2s ease, color 0.2s ease, font-stretch 0.2s ease,
+    font-weight 0.2s ease;
+}
+
+.hoverT:hover {
+  --add: 1;
+}
+
+.hoverT:hover + .hoverT,
+.hoverT:has(+ .hoverT:hover) {
+  --add: 0.7;
+}
+
+.hoverT:hover + .hoverT + .hoverT,
+.hoverT:has(+ .hoverT + .hoverT:hover) {
+  --add: 0.45;
+}
+
+.hoverT:hover + .hoverT + .hoverT + .hoverT,
+.hoverT:has(+ .hoverT + .hoverT + .hoverT:hover) {
+  --add: 0.2;
+}

@@ -1,0 +1,25 @@
+.vDiv {
+  position: sticky;
+  top: 0;
+  display: flex;
+  /* height: 100vh; */
+  align-items: end;
+  overflow: hidden;
+}
+
+.vt {
+  transform-origin: bottom left;
+  padding: 10px 0px;
+  white-space: nowrap;
+  font-size: 7rem; /* equivalent to text-5xl */
+  font-weight: 900; /* equivalent to font-black */
+  text-transform: uppercase; /* equivalent to uppercase */
+  line-height: 0.85;
+}
+
+@media (min-width: 768px) {
+  .vt {
+    font-size: 4.5rem; /* equivalent to text-7xl */
+    line-height: 0.85; /* equivalent to md:leading-[0.85] */
+  }
+}
