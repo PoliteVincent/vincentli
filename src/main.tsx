@@ -1,7 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import {
-  createBrowserRouter,
+  // createBrowserRouter Not good for deployment in Github/static,
+  createHashRouter,
   RouterProvider,
   useLocation,
 } from "react-router-dom";
@@ -54,7 +55,39 @@ const PageTransition = ({ children }: PageTransitionProps) => {
   );
 };
 
-const router = createBrowserRouter([
+// const router = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: (
+//       <PageTransition>
+//         <Welcome />
+//       </PageTransition>
+//     ),
+//     errorElement: (
+//       <PageTransition>
+//         <ErrorPage />
+//       </PageTransition>
+//     ),
+//   },
+//   {
+//     path: "/vli",
+//     element: (
+//       <PageTransition>
+//         <App />
+//       </PageTransition>
+//     ),
+//     errorElement: (
+//       <PageTransition>
+//         <ErrorPage />
+//       </PageTransition>
+//     ),
+//   },
+//   {
+//     path: "/1",
+//     element: <Me />,
+//   },
+// ]);
+const router = createHashRouter([
   {
     path: "/",
     element: (
@@ -83,7 +116,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/1",
-    element: <Me />,
+    element: (
+      <PageTransition>
+        <Me />
+      </PageTransition>
+    ),
   },
 ]);
 
