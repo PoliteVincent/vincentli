@@ -3,19 +3,40 @@ import { MouseEvent } from "react";
 const Experiences = () => {
   return (
     <div className="divide-y divide-neutral-900 border border-neutral-900">
-      <div className="grid grid-cols-2 divide-x divide-neutral-900">
+      <div className="flex flex-col items-start">
         <LinkBox
           company={"Langji Intelligent Technology Co., Ltd. "}
           title={"Software Engineer Intern"}
+          time={"June 2024 - August 2024"}
+          description={[
+            "Collaborated with a team of 5 to develop the client portal login page...",
+            "Engineered a secure SMS verification system...",
+            "Implemented CAPTCHA verification prevent port abuse...",
+            "Refactored custom hooks to resolve an unexpected re-render for optimization...",
+          ]}
         />
-      </div>
-      <div className="grid grid-cols-4 divide-x divide-neutral-900">
+        <LinkBox
+          company={"UNC Department of Computer Science"}
+          title={"Tutoring Lead"}
+          time={"January 2024 - June 2024"}
+          description={[
+            "Led a team of 10 teaching assistants to provide dedicated tutoring sessions...",
+            "Developed and implemented a new section on the course website...",
+            "Held biweekly meetings with faculty to refine tutoring materials...",
+          ]}
+        />
         <LinkBox
           company={"UNC Department of Computer Science"}
           title={"Undergraduate Teaching Assistant"}
+          time={"January 2023 - Present"}
+          description={[
+            "Mentored over 500 students, effectively conveying Python concepts to students...",
+            "Organized the annual departmental Hackathon and conducted a Website Development workshop",
+            "Collaborated with the Website Lead on developing course website using Git and Docker...",
+            "Ensured best practices in version control and configure CI/CD files for automated code push checks...",
+          ]}
         />
       </div>
-      <div className="grid grid-cols-3 divide-x divide-neutral-900"></div>
     </div>
   );
 };
@@ -44,11 +65,17 @@ const EXIT_KEYFRAMES: KeyframeMap = {
   right: [NO_CLIP, BOTTOM_LEFT_CLIP],
 };
 
-// type LinkBoxProps = {
-//     company: String,
-//     title: String,
-// }
-const LinkBox = ({ company, title }: { company: String; title: String }) => {
+const LinkBox = ({
+  company,
+  title,
+  time,
+  description,
+}: {
+  company: String;
+  title: String;
+  time: String;
+  description: String[];
+}) => {
   const [scope, animate] = useAnimate();
 
   const getSide = (e: MouseEvent) => {
@@ -108,9 +135,23 @@ const LinkBox = ({ company, title }: { company: String; title: String }) => {
       onMouseLeave={(e) => {
         handleMouseLeave(e);
       }}
-      className="relative grid h-20 w-full place-content-center sm:h-28 md:h-36"
+      className="relative flex flex-col h-23 w-full place-content-center gap-20 p-10 sm:h-30 md:h-36"
     >
-      <h3 className="text-xl sm:text-3xl lg:text-4xl">{company}</h3>
+      <ul className="list-none">
+        <li>
+          <h3 className="sm:text-md md:text-lg lg:text-xl xl:text-2xl font-bold italic">
+            {company}
+          </h3>
+        </li>
+        <li className="grid grid-cols-2 w-full items-center">
+          <p className="sm:text-md md:text-lg lg:text-xl xl:text-2xl font-bold">
+            {title}
+          </p>
+          <p className="sm:text-md md:text-lg lg:text-xl xl:text-2xl self-center justify-self-end">
+            {time}
+          </p>
+        </li>
+      </ul>
 
       <div
         ref={scope}
@@ -119,7 +160,18 @@ const LinkBox = ({ company, title }: { company: String; title: String }) => {
         }}
         className="absolute inset-0 grid place-content-center bg-neutral-900 text-white"
       >
-        <p className="text-xl sm:text-3xl md:text-4xl">{title}</p>
+        {description.map((text, key) => (
+          <ul className="list-disc">
+            <li>
+              <p
+                key={key}
+                className="text-xs text-ellipsis overflow-hidden whitespace-nowrap sm:text-xs md:text-lg lg:text-xl xl:text-2xl "
+              >
+                {text}
+              </p>
+            </li>
+          </ul>
+        ))}
       </div>
     </a>
   );
