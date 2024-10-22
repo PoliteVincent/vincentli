@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, useSpring } from "framer-motion";
 
 // type Position = {
 //   left: number;
@@ -14,7 +14,7 @@ interface Position {
 
 const MenuTabs = () => {
   return (
-    <div className="grid place-content-center bg-white m-10">
+    <div className="grid place-content-center bg-transparent m-10 sticky top-5 z-[1000] mix-blend-normal">
       <SlideTabs />
     </div>
   );
@@ -56,7 +56,6 @@ const Tab = ({
         if (!ref.current) return;
 
         const { width } = ref.current.getBoundingClientRect();
-
         setPosition({
           left: ref.current.offsetLeft,
           width: width,

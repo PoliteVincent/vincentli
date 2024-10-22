@@ -6,6 +6,7 @@ import Experiences from "./Experiences";
 
 import AuroraHero from "./AuroraHero";
 import MenuTabs from "./MenuTabs";
+import MainContent from "./MainContent";
 // import VelocityText from "./text/VelocityText";
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       {/* <AuroraHero /> */}
       <Me />
       <MenuTabs />
-      <Experiences />
+      <MainContent />
     </>
   );
 }

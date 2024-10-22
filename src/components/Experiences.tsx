@@ -2,7 +2,7 @@ import { useAnimate } from "framer-motion";
 import { MouseEvent } from "react";
 const Experiences = () => {
   return (
-    <div className="divide-y divide-neutral-900 border border-neutral-900">
+    <div className="divide-y divide-neutral-900 border border-neutral-900 ">
       <div className="flex flex-col items-start">
         <LinkBox
           company={"Langji Intelligent Technology Co., Ltd. "}
@@ -158,10 +158,10 @@ const LinkBox = ({
         style={{
           clipPath: BOTTOM_RIGHT_CLIP,
         }}
-        className="absolute inset-0 grid place-content-center bg-neutral-900 text-white"
+        className="absolute inset-0 grid  bg-neutral-900 text-white"
       >
         {description.map((text, key) => (
-          <ul className="list-disc">
+          <ul className="list-disc ml-10">
             <li>
               <p
                 key={key}
