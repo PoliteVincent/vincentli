@@ -34,13 +34,13 @@ const MainContent = () => {
       >
         haha
       </ParallaxContent>
-      <ParallaxContent
+      {/* <ParallaxContent
         imgUrl={snowImage}
         subheading="Gallery"
         heading="Enjoy the Beauty of Nature"
       >
         haha
-      </ParallaxContent>
+      </ParallaxContent> */}
       <ParallaxContent
         imgUrl={contactImage}
         subheading="Contact"

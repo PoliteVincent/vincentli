@@ -15,7 +15,7 @@ import React from "react";
 //Importing custome elements here
 import ErrorPage from "./components/ErrorPage.tsx";
 import App from "./components/App.tsx";
-import Welcome from "./components/Welcome.tsx";
+import AuroraHero from "./components/AuroraHero.tsx";
 import Me from "./components/Me.tsx";
 
 type PageTransitionProps = {
@@ -92,7 +92,7 @@ const router = createHashRouter([
     path: "/",
     element: (
       <PageTransition>
-        <Welcome />
+        <AuroraHero />
       </PageTransition>
     ),
     errorElement: (

@@ -83,6 +83,7 @@
 }
 
 .more {
+  margin-top: 1.5rem;
   position: relative; /* relative */
   display: flex; /* flex */
   width: fit-content; /* w-fit */
@@ -94,7 +95,8 @@
   padding-right: 1rem; /* px-4 */
   padding-top: 0.5rem; /* py-2 */
   padding-bottom: 0.5rem; /* py-2 */
-  color: #f9fafb; /* text-gray-50 */
+  /* color: #f9fafb;  */
+  color: #020617;
   transition: background-color 0.2s; /* transition-colors */
 }
 

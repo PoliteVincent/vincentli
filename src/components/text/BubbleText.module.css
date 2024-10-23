@@ -13,23 +13,27 @@
   display: inline-block;
   font-weight: calc(200 + 700 * var(--add));
   font-stretch: calc(100% + 25% * var(--add));
-  color: hsl(240deg, 100%, calc(85% + 15% * 0.45));
+  /* color: hsl(240deg, 100%, calc(85% + 15% * 0.45)); */
+  color: #020617;
   transition: transform 0.2s ease, color 0.2s ease, font-stretch 0.2s ease,
     font-weight 0.2s ease;
 }
 
 .hoverT:hover {
   --add: 1;
+  color: #4467f3;
 }
 
 .hoverT:hover + .hoverT,
 .hoverT:has(+ .hoverT:hover) {
   --add: 0.7;
+  color: #727ca7;
 }
 
 .hoverT:hover + .hoverT + .hoverT,
 .hoverT:has(+ .hoverT + .hoverT:hover) {
   --add: 0.45;
+  color: #344383;
 }
 
 .hoverT:hover + .hoverT + .hoverT + .hoverT,
