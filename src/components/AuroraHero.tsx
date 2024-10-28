@@ -1,8 +1,8 @@
 import "./AuroraHero.css";
 import { FiArrowDown } from "react-icons/fi";
 
-import { Canvas } from "@react-three/fiber";
-import { Stars } from "@react-three/drei";
+// import { Canvas } from "@react-three/fiber";
+// import { Stars } from "@react-three/drei";
 
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";

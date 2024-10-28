@@ -3,13 +3,7 @@ import { MouseEvent } from "react";
 import { IconType } from "react-icons";
 
 import { FaReact, FaGitAlt, FaNode } from "react-icons/fa";
-import {
-  SiTypescript,
-  SiFastify,
-  SiJavascript,
-  SiPython,
-  SiDocker,
-} from "react-icons/si";
+import { SiTypescript, SiJavascript, SiPython, SiDocker } from "react-icons/si";
 
 const Experiences = () => {
   return (

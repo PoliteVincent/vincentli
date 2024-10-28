@@ -2,13 +2,13 @@ import React, { useRef } from "react";
 import uncWellImage from "../assets//unc_well.jpg";
 import techImage from "../assets//tech.jpg";
 import codingImage from "../assets//coding.jpg";
-import snowImage from "../assets//snow.jpg";
 import contactImage from "../assets/contact.jpg";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 
 // Custome component here
 import Experiences from "./Experiences";
+import { ProjectsList } from "./ProjectsList";
 
 const MainContent = () => {
   return (
@@ -32,7 +32,7 @@ const MainContent = () => {
         subheading="Projects"
         heading="Working on more"
       >
-        haha
+        <ProjectsList />
       </ParallaxContent>
       {/* <ParallaxContent
         imgUrl={snowImage}

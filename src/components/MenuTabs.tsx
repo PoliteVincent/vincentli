@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { motion, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 
 // type Position = {
 //   left: number;

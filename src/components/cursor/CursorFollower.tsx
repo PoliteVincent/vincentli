@@ -8,7 +8,7 @@ export default function CursorFollower() {
 
   // Track mouse movement
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: { clientX: any; clientY: any }) => {
       const { clientX, clientY } = e;
 
       // Calculate the change in position to determine speed
