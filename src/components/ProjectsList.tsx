@@ -59,7 +59,7 @@ const Link = ({
   const y = useSpring(yRaw);
 
   const top = useTransform(y, [0.5, -0.5], ["40%", "60%"]);
-  const left = useTransform(x, [0.5, -0.5], ["60%", "70%"]);
+  const left = useTransform(x, [0.5, -0.5], ["72%", "82%"]);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     const rect = targetRef.current?.getBoundingClientRect();

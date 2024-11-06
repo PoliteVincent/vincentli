@@ -9,6 +9,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 // Custome component here
 import Experiences from "./Experiences";
 import { ProjectsList } from "./ProjectsList";
+import TechStack from "./TechStack";
 
 const MainContent = () => {
   return (
@@ -25,7 +26,7 @@ const MainContent = () => {
         subheading="Tech Stacks"
         heading="Constanly expanding"
       >
-        haha
+        <TechStack />
       </ParallaxContent>
       <ParallaxContent
         imgUrl={codingImage}
@@ -46,7 +47,7 @@ const MainContent = () => {
         subheading="Contact"
         heading="Stay Connected"
       >
-        haha
+        Placeholder
       </ParallaxContent>
     </div>
   );
