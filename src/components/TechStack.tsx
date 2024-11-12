@@ -3,49 +3,63 @@ import { useState } from "react";
 import FlipText from "./text/FlipText";
 
 //Backend
-import { SiFastify, SiNestjs } from "react-icons/si";
-import { FaNode } from "react-icons/fa";
-import { DiRedis, DiDjango, DiDocker } from "react-icons/di";
-import { BiLogoPostgresql } from "react-icons/bi";
+import { DiDjango } from "react-icons/di";
+
+import PostgreSQL from "../assets/Icons/postgresql.svg?react";
+import Redis from "../assets/Icons/redis.svg?react";
+// import Fastify from "../assets/Icons/fastify.svg?react";
+import Node from "../assets/Icons/nodejs.svg?react";
+import Docker from "../assets/Icons/docker.svg?react";
+import NestJS from "../assets/Icons/nestjs.svg?react";
+import { SiFastify } from "react-icons/si";
 
 //Frontend
-import {
-  SiReact,
-  SiAngular,
-  SiTypescript,
-  SiTailwindcss,
-  SiSass,
-} from "react-icons/si";
+import ReactLogo from "../assets/Icons/react.svg?react";
+import AngularLog from "../assets/Icons/angular.svg?react";
+import TailwindLogo from "../assets/Icons/tailwindcss.svg?react";
+import SassLogo from "../assets/Icons/sass.svg?react";
+import TypeScript from "../assets/Icons/typescript.svg?react";
+
 import { TbBrandFramerMotion } from "react-icons/tb";
 
-// import ReactLogo from "../assets/Icons/react.svg";
-
 const backendLeft = [
-  { component: <FaNode size={40} />, width: -30, height: -80 },
-  { component: <DiRedis size={40} />, width: 50, height: 100 },
-  { component: <BiLogoPostgresql size={40} />, width: -200, height: -100 },
+  { component: <Node width={40} height={40} />, width: -30, height: -80 },
+  { component: <Redis width={40} height={40} />, width: 50, height: 100 },
+  {
+    component: <PostgreSQL width={40} height={40} />,
+    width: -200,
+    height: -100,
+  },
 ];
 const backendRight = [
   { component: <SiFastify size={40} />, width: 100, height: -150 },
-  { component: <SiNestjs size={40} />, width: -100, height: 150 },
-  { component: <DiDocker size={40} />, width: 200, height: -200 },
+  { component: <NestJS width={40} height={40} />, width: -100, height: 150 },
+  { component: <Docker width={40} height={40} />, width: 200, height: -200 },
   { component: <DiDjango size={40} />, width: -30, height: -100 },
 ];
 
 const frontendRight = [
-  { component: <SiSass size={30} />, width: 30, height: 80 },
-  { component: <TbBrandFramerMotion size={30} />, width: -50, height: -100 },
-  { component: <SiTypescript size={30} />, width: 200, height: 100 },
+  { component: <SassLogo width={40} height={40} />, width: 30, height: 80 },
+  { component: <TbBrandFramerMotion size={40} />, width: -50, height: -100 },
+  { component: <TypeScript width={40} height={40} />, width: 200, height: 100 },
 ];
 
 const frontendLeft = [
   {
-    component: <SiReact size={30} />,
+    component: <ReactLogo width={40} height={40} />,
     width: -100,
     height: 150,
   },
-  { component: <SiAngular size={30} />, width: 100, height: -150 },
-  { component: <SiTailwindcss size={30} />, width: -200, height: 200 },
+  {
+    component: <AngularLog width={40} height={40} />,
+    width: 100,
+    height: -150,
+  },
+  {
+    component: <TailwindLogo width={40} height={40} />,
+    width: -200,
+    height: 200,
+  },
 ];
 
 const TechStack = () => {
